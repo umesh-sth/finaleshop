@@ -1,13 +1,40 @@
 {% extends 'shop/basic.html' %}
 
 {% block title%} Pay your order{% endblock %}
-{% block body %} <h1>
-       You have paid Rs.{{price}} successfully for your orders.
+{%block css%}
+    .container{
+        background-color:#c2d6d6;
+        border-color:black;
+        border-width: 1px;
+        align-items:center;
+    }
+    
+    
+{%endblock%}
+{% block body %} 
+<br><br><br><br>
+    <div class="card text-left" style="width: 30rem;">
+        <div class="card-header">
+          <h1>Payment Slip</h1>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Name of the customer : {{name}}</li>
+          <li class="list-group-item">Email address : {{gmail}}</li>
+          <li class="list-group-item">Delivery Address : {{del_address}}</li>
+          <li class="list-group-item">Total amount paid : Rs.{{price}}</li>
+    
+        </ul>
+      </div>
 
-    </h1>
-<h2>
-    <p>***Thank you for shopping with us***</p>
-    <p>!! Keep shopping with eshop !!</p>
-</h2>
+    
+
+  <p></p>
+  <div>
+      <h6>Take the screenshot!</h6>
+      <h6>Thank you for shopping with us!</h6>
+      <h6>e-shop</h6>
+      <h6>Easy shopping</h6>
+  </div>
+
 {% endblock %}
 
