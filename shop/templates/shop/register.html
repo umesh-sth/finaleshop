@@ -1,0 +1,50 @@
+{%extends 'shop/basic.html'%}
+{% block title%} Register-eshop{% endblock %}
+{% block head %}
+<br><br>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="registration.css" rel = "stylesheet"  >
+{%endblock%}
+{%block content%}
+
+<div class= "container">
+  <!-- <div class = "jumbotron jombotron-fluid"> -->
+     <nav class="navbar navbar-expand-md navbar-light bg-light">
+     </nav>
+     <nav class="navbar navbar-expand-md navbar-light bg-light" >
+       {% if registered %}
+       <br>
+       <h1 style="color:yellow;">Thank you for registering!</h1>
+       {% else %}
+       <span class="navbar-brand mb-0 h1" ><h1>Signup</h1></span>
+     </nav>
+     <br>
+     <div class="title"><h2>Register Here</h2></div>
+		<div class="container">
+		<div class="left"></div>
+		<div class="right">
+            <div class="formbox">
+                <form method="POST">
+	            {%csrf_token%}
+                {{user_form.as_p}}
+                {{user_profile.as_p}}
+                <input type="submit" class= "btn btn-primary" value="Signup">
+      	    </form>
+            </div>
+        </div>
+        </div>
+     {%endif%}
+        </div>
+
+{%endblock%}
+
+
+
+
+
+
+

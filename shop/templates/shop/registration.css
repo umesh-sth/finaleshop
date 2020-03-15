@@ -1,0 +1,110 @@
+.form-box input {
+    width: 300px;
+    height: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+    padding-left: 35px;
+    background: rgba(255, 255, 255, 0.884);
+    color: rgb(77, 77, 77);
+}
+
+.form-box {
+    width: 400px;
+    height: 350px;
+    background-color: #3b5998;
+    margin-left: 50%;
+    margin-top: -10px;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+}
+
+.form-box img {
+    width: 80px;
+    height: 80px;
+    margin-top: -45px;
+    border: 0;
+    border-radius: 50px;
+}
+
+button {
+    background-image: none;
+    background: transparent;
+}
+
+button {
+    margin: 15px 0 !important;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+button.button-normal,
+.button-normal a {
+    display: inline-block;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em !important;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 30px 0;
+}
+
+button.button-normal.white,
+.button-normal.white a {
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    color: #0097a7;
+}
+
+button.button-normal.white:hover,
+.button-normal.white a:hover {
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+button.button-normal.green,
+.button-normal.green a {
+    background-color: #0097a7;
+    border: 1px solid #0097a7;
+    color: #ffffff;
+}
+
+button.button-normal.green:hover,
+.button-normal.green a:hover {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.login-page {
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    padding: 0;
+}
+
+.login-page .form-box {
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.jumbotron {
+    padding: 0;
+    height: 100vh;
+}
+
+.form-footer a {
+    color: #ffffff;
+}
+
+.form-footer a:hover {
+    color: black;
+    text-decoration: none;
+}

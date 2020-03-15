@@ -1,0 +1,141 @@
+{%extends 'shop/basic.html'%}
+{% load static %}
+{% block title %} Login- e-shop
+{% endblock %}
+{%block css%}
+*{
+    margin: 0px;
+    padding: 0px;
+  }
+
+body{
+  margin: 0;
+  padding: 0;
+  background-image: url("{% static 'shop/back.jpg' %}");
+  background-size:1000px 700px;
+  font-family: sans-serif;
+}
+.title{
+  text-align: center;
+
+  padding: 50px 0 20px;
+}
+.title h1{
+  margin: 0;
+  padding: 0;
+  color: #5c071b;
+  font-size: 36px;
+}
+.container{
+  width: 50%;
+  height: 400px;
+  background:#e7caed;
+  margin: 0 auto;
+  border: 2px solid #fff;
+  box-shadow: 0 15px 40px rgba(0,0,0,.5);
+  float:center;
+
+}
+.container .left{
+  float: left;
+  width: 50%;
+  height: 400px;
+background-image: url("{% static 'shop/logo.png' %}");
+background-size: 385px 385px;
+  box-sizing: border-box;
+}
+div.container {
+
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 1;
+}
+
+.container .right{
+  float: right;
+  width: 50%;
+  height: 400px;
+  box-sizing: border-box;
+}
+.formbox{
+  width: 100%;
+  padding:80px;
+  padding-right: 80px 40px;
+  box-sizing: border-box;
+  height: 400px;
+  background: #fff;
+}
+.formbox h4{
+  color: #a6af13;
+  margin-bottom: 20px;
+}
+.formbox input{
+  width: 100%;
+  margin-bottom: 20px;
+
+}
+.formbox input[type="text"],
+.formbox input[type="password"]
+{
+  border: none;
+  border-bottom:  2px solid #a6af13;
+  opacity: none;
+  font-weight: bold;
+  height: 40px;
+}
+.formbox input[type="text"]:focus,
+.formbox input[type="password"]:focus
+{
+   border-bottom: 2px solid #262626;
+}
+.formbox input[type="submit"]{
+  border: none;
+  outline: none;
+  height: 40px;
+  color: white;
+  background: #262626;
+  opacity: .8;
+  border-radius: 14px;
+
+}
+
+{%endblock%}
+{%block content%}
+<br><br><br><br>
+<div class="title"><h1><mark><strong>***Login to our page***</strong></mark></h1></div>
+		<div class="container">
+			<div class="left"><p>
+</p>
+            </div>
+			<div class="right">
+
+	<div class="formbox">
+
+     <form action="{% url 'shop:user_login'%}" method ="post">
+     {% csrf_token %}
+     <div>
+  <div class="form-group">
+     <div class ="user">    <label for="username">Username:</label>
+     </div>
+     <input type = "text" id ="userid" name="username" placeholder="Enter Username">
+  </div>
+  <div class="form-group">
+       <div class = "pass">
+            <label for="password">Password:</label>
+       </div>
+     <input id  = "passid" type="password" name = "password">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Sign In</button>
+     </div>
+</form>
+
+    </div>
+            </div>
+        </div>
+
+
+
+
+{%endblock%}
+
