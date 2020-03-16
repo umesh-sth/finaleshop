@@ -140,7 +140,7 @@ def checkout(request):
                 q.balance = int(q.balance) - int(amount)
                 q.save()
                 print(q.balance)
-                return render(request, 'shop/success.html', {"price": amount})
+                return render(request, 'shop/success.html', {"price": amount,"gmail":gmail,"name":name,"del_address":del_address})
             else:
                 return render(request, 'shop/declined.html')
 
