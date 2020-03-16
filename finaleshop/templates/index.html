@@ -1,3 +1,5 @@
+{%load static%}
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -9,15 +11,41 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <title>Welcome To eshop </title>
+  <style rel = "stylesheet">
+  body{
+    background-image: url("{% static 'shop/eccommerce.jpg' %}");
+    background-size:cover;
+    opacity:0.9;
+
+  }
+  div.container{
+    
+    width: 495px;
+    height:350px ;
+    float:left;
+    margin-top:10px;
+    margin-left: 10px;
+    border-width: 3px;
+    border-color:black;
+    
+  }
+  b{
+    color:green;
+  }
+  .container .lead{
+    color:white;
+  }
+  </style>
+
   </head>
   <body>
 
-  <div class="jumbotron">
-  <h1 class="display-4">Welcome to eshop</h1>
-  <p class="lead">eshop is the online shopping platform that provides privacy as well as the fastest delivery services. </p>
-  <hr class="my-4">
-
-  <a class="btn btn-primary btn-lg" href="/shop" role="button">Start Shopping</a>
+  <div class="container">
+  <h1 class="display-4"><b>Welcome to eshop</b></h1>
+    <p class="lead">eshop is the online shopping platform that provides privacy as well as the fastest delivery services. </p>
+    <p class ="lead">We provide simple but the best platform for anyone for the online shopping experience.</p>
+    <hr class="my-4">
+  <a class="btn btn-success btn-lg" href="/shop" role="button">Start Shopping</a>
 </div>
 
     <!-- Optional JavaScript -->
